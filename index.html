@@ -35,14 +35,17 @@ nav a{
     margin:0 25px;
     font-size:20px;
     font-family:'Playfair Display',serif;
+    font-weight:600;
 }
 
 .hero{
     height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-    url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80')
-    center/cover no-repeat;
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+        url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -50,16 +53,17 @@ nav a{
 }
 
 .hero h1{
-    font-size:82px;
-    color:#fff;
-    text-shadow:0 0 18px rgba(212,175,55,.45);
+    font-size:90px;
+    color:#d4af37;
     font-family:'Playfair Display',serif;
+    text-shadow:0 0 18px rgba(212,175,55,.45);
 }
 
 .hero p{
-    font-size:28px;
-    color:#eee;
+    font-size:30px;
+    color:#d4af37;
     margin-top:20px;
+    font-weight:500;
 }
 
 .gallery{
@@ -111,7 +115,6 @@ footer{
     padding:40px;
     border-top:1px solid #222;
     color:#888;
-    background:#0a0a0a;
 }
 </style>
 </head>
@@ -132,11 +135,11 @@ footer{
 <section class="gallery" id="gallery">
     <h2>Galeria</h2>
     <div class="grid">
-        <img src="twoje-zdjecie1.jpg" alt="Bursztyn 1">
-        <img src="twoje-zdjecie2.jpg" alt="Bursztyn 2">
-        <img src="twoje-zdjecie3.jpg" alt="Bursztyn 3">
-        <img src="twoje-zdjecie4.jpg" alt="Bursztyn 4">
-        <img src="twoje-zdjecie5.jpg" alt="Bursztyn 5">
+        <img src="twoje-zdjecie1.jpg">
+        <img src="twoje-zdjecie2.jpg">
+        <img src="twoje-zdjecie3.jpg">
+        <img src="twoje-zdjecie4.jpg">
+        <img src="twoje-zdjecie5.jpg">
     </div>
 </section>
 
