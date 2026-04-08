@@ -38,6 +38,18 @@ nav a{
     font-weight:600;
 }
 
+#languageSwitcher{
+    position:absolute;
+    top:20px;
+    right:30px;
+    background:#111;
+    color:#d4af37;
+    border:1px solid #d4af37;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:16px;
+}
+
 .hero{
     height:100vh;
     background-image:
@@ -64,7 +76,6 @@ nav a{
     color:#d4af37;
     margin-top:20px;
     font-weight:500;
-}
 }
 
 .gallery{
@@ -122,31 +133,38 @@ footer{
 <body>
 
 <nav>
-    <a href="#gallery">Galeria</a>
-    <a href="#instagram">Instagram</a>
+    <a href="#gallery" id="navGallery">Galeria</a>
+    <a href="#instagram" id="navInstagram">Instagram</a>
+
+    <select id="languageSwitcher" onchange="changeLanguage(this.value)">
+        <option value="pl">PL</option>
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        <option value="zh">中文</option>
+    </select>
 </nav>
 
 <section class="hero">
     <div>
         <h1>M-Amber</h1>
-        <p>Ekskluzywne wyroby z bursztynu</p>
+        <p id="heroText">Ekskluzywne wyroby z bursztynu</p>
     </div>
 </section>
 
 <section class="gallery" id="gallery">
-    <h2>Galeria</h2>
+    <h2 id="galleryTitle">Galeria</h2>
     <div class="grid">
-    <img src="amber5.png" alt="Wyroby bursztynowe 1">
-    <img src="amber6.png" alt="Wyroby bursztynowe 2">
-    <img src="amber7.png" alt="Wyroby bursztynowe 3">
-    <img src="amber8.png" alt="Wyroby bursztynowe 4">
-    <img src="amber9.png" alt="Wyroby bursztynowe 5">
-</div>
+        <img src="amber5.png" alt="Wyroby bursztynowe 1">
+        <img src="amber6.png" alt="Wyroby bursztynowe 2">
+        <img src="amber7.png" alt="Wyroby bursztynowe 3">
+        <img src="amber8.png" alt="Wyroby bursztynowe 4">
+        <img src="amber9.png" alt="Wyroby bursztynowe 5">
+    </div>
 </section>
 
 <section class="instagram" id="instagram">
-    <h2>Więcej na Instagramie</h2>
-    <a class="btn" href="https://www.instagram.com/maarek_golebiowski/" target="_blank">
+    <h2 id="instaTitle">Więcej na Instagramie</h2>
+    <a class="btn" id="instaBtn" href="https://www.instagram.com/maarek_golebiowski/" target="_blank">
         Przejdź do Instagrama
     </a>
 </section>
@@ -154,6 +172,48 @@ footer{
 <footer>
     © 2026 M-Amber
 </footer>
+
+<script>
+function changeLanguage(lang){
+    const translations = {
+        pl: {
+            hero: "Ekskluzywne wyroby z bursztynu",
+            gallery: "Galeria",
+            instagram: "Instagram",
+            more: "Więcej na Instagramie",
+            button: "Przejdź do Instagrama"
+        },
+        en: {
+            hero: "Exclusive amber creations",
+            gallery: "Gallery",
+            instagram: "Instagram",
+            more: "More on Instagram",
+            button: "Visit Instagram"
+        },
+        de: {
+            hero: "Exklusive Bernsteinprodukte",
+            gallery: "Galerie",
+            instagram: "Instagram",
+            more: "Mehr auf Instagram",
+            button: "Zu Instagram"
+        },
+        zh: {
+            hero: "高端琥珀精品",
+            gallery: "画廊",
+            instagram: "Instagram",
+            more: "更多内容请看Instagram",
+            button: "前往 Instagram"
+        }
+    };
+
+    document.getElementById("heroText").innerText = translations[lang].hero;
+    document.getElementById("navGallery").innerText = translations[lang].gallery;
+    document.getElementById("galleryTitle").innerText = translations[lang].gallery;
+    document.getElementById("navInstagram").innerText = translations[lang].instagram;
+    document.getElementById("instaTitle").innerText = translations[lang].more;
+    document.getElementById("instaBtn").innerText = translations[lang].button;
+}
+</script>
 
 </body>
 </html>
