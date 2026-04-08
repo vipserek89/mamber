@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M-Amber | Luxury Baltic Amber</title>
+<title>M-Amber | Ekskluzywne wyroby z bursztynu</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
@@ -20,53 +20,54 @@ body{
     font-family:'Montserrat',sans-serif;
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 60px;
-    border-bottom:1px solid #222;
-    background:#0d0d0d;
-}
-
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:42px;
-    color:#d4af37;
-    letter-spacing:2px;
+nav{
+    width:100%;
+    text-align:center;
+    padding:25px;
+    position:absolute;
+    top:0;
+    z-index:10;
 }
 
 nav a{
-    color:#ddd;
+    color:#d4af37;
     text-decoration:none;
-    margin-left:30px;
-    font-size:18px;
+    margin:0 25px;
+    font-size:20px;
+    font-family:'Playfair Display',serif;
 }
 
 .hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+    url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80')
+    center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:120px 20px 80px;
 }
 
 .hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:64px;
+    font-size:82px;
     color:#d4af37;
-    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
 }
 
 .hero p{
-    font-size:22px;
-    color:#bbb;
+    font-size:28px;
+    color:#eee;
+    margin-top:20px;
 }
 
 .gallery{
-    padding:80px 40px;
+    padding:90px 40px;
 }
 
 .gallery h2{
     text-align:center;
-    font-size:48px;
+    font-size:52px;
     margin-bottom:50px;
     font-family:'Playfair Display',serif;
     color:#d4af37;
@@ -84,11 +85,6 @@ nav a{
     object-fit:cover;
     border-radius:18px;
     box-shadow:0 0 20px rgba(212,175,55,0.15);
-    transition:0.3s;
-}
-
-.grid img:hover{
-    transform:scale(1.02);
 }
 
 .instagram{
@@ -117,17 +113,16 @@ footer{
 </head>
 <body>
 
-<header>
-    <div class="logo">M-Amber</div>
-    <nav>
-        <a href="#gallery">Galeria</a>
-        <a href="#instagram">Instagram</a>
-    </nav>
-</header>
+<nav>
+    <a href="#gallery">Galeria</a>
+    <a href="#instagram">Instagram</a>
+</nav>
 
 <section class="hero">
-    <h1>Ekskluzywne wyroby z bursztynu</h1>
-    <p>Ręcznie tworzone dzieła inspirowane naturą Bałtyku</p>
+    <div>
+        <h1>M-Amber</h1>
+        <p>Ekskluzywne wyroby z bursztynu</p>
+    </div>
 </section>
 
 <section class="gallery" id="gallery">
